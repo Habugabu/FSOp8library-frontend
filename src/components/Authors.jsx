@@ -34,7 +34,12 @@ const Authors = (props) => {
           ))}
         </tbody>
       </table>
-      <UpdateAuthor authorNames={authors.map((a) => a.name)} />
+      {props.token ? (
+        <UpdateAuthor
+          authorNames={authors.map((a) => a.name)}
+          token={props.token}
+        />
+      ) : null}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ALL_AUTHORS, SET_AUTHOR_BIRTHYEAR } from "../queries";
 
-const UpdateAuthor = ({ authorNames }) => {
+const UpdateAuthor = ({ authorNames, token }) => {
   const [name, setName] = useState("");
   const [born, setBorn] = useState("");
 
